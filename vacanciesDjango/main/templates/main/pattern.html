@@ -16,14 +16,14 @@
         </header>
         <div class="main-content">
             <aside>
-                <h3>Навигация</h3>
+                <span class="aside-title"><h3>Навигация</h3></span>
                 <ul>
-                    <a href="#"><li>Главная страница</li></a>
-                    <a href="#"><li>Общая статистика</li></a>
-                    <a href="#"><li>Востребованность</li></a>
-                    <a href="#"><li>География</li></a>
-                    <a href="#"><li>Навыки</li></a>
-                    <a href="#"><li>Последние вакансии</li></a>
+                    <a href="{% url 'home' %}"><li>Главная страница</li></a>
+                    <a href="{% url 'statistic' %}"><li>Общая статистика</li></a>
+                    <a href="{% url 'relevance' %}"><li>Востребованность</li></a>
+                    <a href="{% url 'geography' %}"><li>География</li></a>
+                    <a href="{% url 'skills' %}"><li>Навыки</li></a>
+                    <a href="{% url 'vacancies' %}"><li>Последние вакансии</li></a>
                 </ul>
             </aside>
             <main>

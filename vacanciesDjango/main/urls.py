@@ -2,10 +2,10 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index),
-    path('statistic', views.statistic),
-    path('relevance', views.relevance),
-    path('geography', views.geography),
-    path('skills', views.skills),
-    path('vacancies', views.vacancies)
+    path('', views.index, name="home"),
+    path('statistic', views.statistic, name="statistic"),
+    path('relevance', views.relevance, name="relevance"),
+    path('geography', views.geography, name="geography"),
+    path('skills', views.skills, name="skills"),
+    path('vacancies', views.vacancies, name="vacancies")
 ]
