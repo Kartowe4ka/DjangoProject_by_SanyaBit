@@ -1,0 +1,90 @@
+/* Стили для паттерна - общий шаблон для всех страниц */
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #fff;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
+}
+
+header {
+    width: 30%;
+    background: #4188D2;
+    color: #fff;
+    padding: 10px;
+    font-style: italic;
+    border-radius: 0px 0px 50px 0px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+footer {
+    background: #4188D2;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+    margin-left: auto;
+    border-radius: 50px 0px 0px 0px;
+    height: 100px;
+}
+
+footer h3 {
+    margin-top: 10px;
+}
+
+aside {
+    float: left;
+    background: #FF6F61;
+    width: 15%;
+    padding: 3%;
+    margin-top: 30px;
+    border-radius: 0 20px 20px 0;
+    height: 96%;
+    /*flex-grow: 1;*/
+    position: sticky;
+    color: #fff;
+}
+
+aside h3 {
+    margin-top: -40px;
+    font-size: 40px;
+    margin-left: -23px;
+}
+
+aside ul {
+    list-style: none;
+    text-align: center;
+    margin-left: -40px;
+    font-size: 20px;
+    margin-bottom: -20px;
+}
+
+aside a {
+    text-decoration: none;
+}
+
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: all .4s;
+    justify-content: center;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #4188D2;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+
+
+

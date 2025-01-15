@@ -1,6 +1,11 @@
 {% extends 'main/pattern.html' %}
+{% load static %}
 
 {% block title %}Главная страница{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+{% endblock %}
 
 {% block content %}
     <h1 class="index-title">1C-разработчик</h1>

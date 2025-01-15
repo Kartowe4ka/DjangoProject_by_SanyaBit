@@ -21,5 +21,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls'))
+    path('', include('main.urls', namespace='main')),
+    path('statistic/', include('statistic.urls', namespace='statistic')),
+    path('relevance/', include('relevance.urls', namespace='relevance')),
+    path('geography/', include('geography.urls', namespace='geography')),
+    path('skills/', include('skills.urls', namespace='skills')),
+    path('vacancies/', include('vacancies.urls', namespace='vacancies')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
