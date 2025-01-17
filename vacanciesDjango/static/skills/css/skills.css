@@ -1,0 +1,67 @@
+.skills-title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #4188D2;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.info-card {
+    display: grid;
+    grid-template-columns: 50vh 50vh;
+    grid-column-gap: 30px;
+    color: white;
+    /*height: 442px;*/
+    background: white;
+    border: 2px solid #4188D2;
+    margin-left: 320px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: 70px;
+    margin-top: 2px;
+    font-size: 14px;
+    background: white;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+caption {
+    caption-side: top;
+    text-align: center;
+    color: #039;
+    font-size: 16px;
+}
+
+th {
+    font-weight: normal;
+    color: #039;
+    border-bottom: 2px solid #6678b1;
+    padding: 10px 8px;
+    text-align: center;
+}
+td {
+    color: #669;
+    padding: 9px 8px;
+    transition: .3s linear;
+    border-bottom: 1px solid #ccc;
+}
+tr:hover td {
+    color: #6699ff;
+}
+
+.chart {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+img {
+    margin-left: 120px;
+}
+

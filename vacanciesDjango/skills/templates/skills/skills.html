@@ -2,3 +2,29 @@
 {% load static %}
 
 {% block title %}Навыки{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'skills/css/skills.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1 class="skills-title">{{ skills.name }}</h1>
+    <div class="info-card">
+        <div class="table">
+            <table class="skills-table">
+                <caption>{{skills.name}}</caption>
+                <tbody class="skills-table-body">
+                    {% for skill, count in skills.table.items %}
+                        <tr class="skills-table-body-line">
+                            <td>{{skill}}</td>
+                            <td>{{count}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="chart">
+            <img src="{{ skills.chart.url }}">
+        </div>
+    </div>
+{% endblock %}
