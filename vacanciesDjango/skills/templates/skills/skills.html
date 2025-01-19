@@ -7,24 +7,33 @@
     <link rel="stylesheet" href="{% static 'skills/css/skills.css' %}">
 {% endblock %}
 
+
 {% block content %}
-    <h1 class="skills-title">{{ skills.name }}</h1>
-    <div class="info-card">
-        <div class="table">
-            <table class="skills-table">
-                <caption>{{skills.name}}</caption>
-                <tbody class="skills-table-body">
-                    {% for skill, count in skills.table.items %}
-                        <tr class="skills-table-body-line">
-                            <td>{{skill}}</td>
-                            <td>{{count}}</td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+    {% for i in skills %}
+        <h1 class="skills-title">{{ i.name }}</h1>
+        <div class="info-card">
+            <div class="table">
+                <table class="skills-table">
+                    <caption>{{ i.name }}</caption>
+                    <tbody class="skills-table-body">
+                        <thead>
+                            <tr>
+                                <th>{{i.table.1st_column}}</th>
+                                <th>{{i.table.2nd_column}}</th>
+                            </tr>
+                        </thead>
+                        {% for k, v in i.table.data.items %}
+                            <tr class="skills-table-body-line">
+                                <td>{{k}}</td>
+                                <td>{{v}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="chart">
+                <img src="{{ i.chart.url }}">
+            </div>
         </div>
-        <div class="chart">
-            <img src="{{ skills.chart.url }}">
-        </div>
-    </div>
+    {% endfor %}
 {% endblock %}

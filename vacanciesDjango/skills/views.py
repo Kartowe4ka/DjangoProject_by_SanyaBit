@@ -3,7 +3,7 @@ from statistic.models import Statistic
 
 # Create your views here.
 def skills(request):
-    skills = Statistic.objects.get(name='ТОП-20 навыков по годам')
+    skills = Statistic.objects.filter(stat_class="Навыки", is_active=True)
 
     data = {
         "skills": skills
