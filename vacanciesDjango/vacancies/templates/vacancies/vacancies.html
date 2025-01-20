@@ -2,3 +2,28 @@
 {% load static %}
 
 {% block title %}Последние вакансии{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'vacancies/css/vacancies.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="info">
+        <h1>Последние вакансии</h1>
+        <div class="vacancies">
+            {% for value in data.values %}
+                <div class="vacancies-card">
+                    <div class="card-title">
+                        <h2>{{value.name}}</h2>
+                    </div>
+                    <div class="card-info">
+                        <h3>Оклад: {{value.salary}} руб.</h3>
+                        <h3>Город: {{value.area}}</h3>
+                        <h3>Компания: "{{value.employer}}"</h3>
+                    </div>
+                    <div class="card-date"><p class="date">{{value.published_at}}</p></div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
