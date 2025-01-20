@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 import json
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 def get_page(page = 0):
@@ -28,14 +28,17 @@ for page in range(0, 5):
 
 
 date = datetime.now().date()
+yesterday = date - timedelta(days=1)
+
 
 df = pd.DataFrame(js_objs)[['name', 'area', 'salary', 'published_at', 'employer']].dropna()
 df['published_at'] = pd.to_datetime(df['published_at']).dt.date
-df = df.loc[df['published_at'] == date]
+df = df.loc[(df['published_at'] == date) | (df['published_at'] == yesterday)]
 df['published_at'] = df['published_at']
 df['area'] = df['area'].map(lambda a: a['name'])
 df['salary'] = df['salary'].map(lambda a: a['from'])
-df['salary'].fillna(int(df['salary'].mean()), inplace=True)
+#df['salary'].fillna(int(df['salary'].mean()), inplace=True)
+df['salary'].fillna(0)
 df['employer'] = df['employer'].map(lambda a: a['name'])
 res = df.head(9)
 

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-x42dcqk3k1g8tpz*^li6_w+!fnukg_hvqz+ukk6ux2tgn$@2*^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sashapopugaev27.pythonanywhere.com',]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -123,7 +123,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = BASE_DIR / 'static/'
+#STATIC_ROOT = BASE_DIR / 'static/'
+#STATIC_ROOT = '/home/sashapopugaev27/DjangoProject_by_SanyaBit/vacanciesDjango/static'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
@@ -133,6 +134,7 @@ STATICFILES_DIRS = [
 MEDIA_URL = 'media/'
 
 MEDIA_ROOT = BASE_DIR / 'media/'
+#MEDIA_ROOT = '/home/sashapopugaev27/DjangoProject_by_SanyaBit/vacanciesDjango/static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
